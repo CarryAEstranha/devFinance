@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dev.finance$</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel = "stylesheet" href = "./styles.css">
+
+    <script type = "text/javascript" src = "script.js">         </script>
+</head>
+
+<body>
+    <header>
+        <div id = "header">
+            <img src="./images/logo.svg" alt="Logo">
+
+            <div>
+                <button id = "buttonImport" class = "headerButtons" onclick = "toggleModal(true)">  Cadastrar   </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id = "profitsContainer">
+            <div class = "card">
+                <div>
+                    <h2 class = "cardTitle">Entradas</h2>
+                    <p id = "incomingValue" class = "cardValue"></p>
+                </div>
+                <div class = "cardImage">
+                    <img src = "./images/entradas.svg" alt = "">
+                </div> 
+            </div>
+            <div class = "card">
+                <div>
+                    <h2 class = "cardTitle">Saídas</h2>
+                    <p id = "outcomingValue" class = "cardValue"></p>
+                </div>
+                <div class = "cardImage">
+                    <img src = "./images/saidas.svg" alt = "">
+                </div> 
+            </div>
+            <div class = "card" style = "background: #49AA26;">
+                <div>
+                    <h2 class = "cardTitle" style = "color: #FFFFFF;">Total</h2>
+                    <p id = "totalValue" class = "cardValue" style = "color: #FFFFFF;"></p>
+                </div>
+                <div class = "cardImage">
+                    <img src = "./images/total.svg" alt = "">
+                </div> 
+            </div>
+        </section>
+
+        <section id = "tableContainer">
+            <table id = "table">
+                <thead id = "tableHead">
+                    <tr>
+                        <td class = "firstColumm"   >Título      </td>
+                        <td class = "secondColumm"  >Preço       </td>
+                        <td class = "thirdColumm"   >Categoria   </td>
+                        <td class = "fourthColumm"  >Data        </td>
+                    </tr>
+                </thead>
+
+                <tbody id = "tableBody">
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <section id = "modal" class = "remove">
+        <div class = "modalBackground" onclick = "toggleModal(false)"></div>
+
+        <div class = "modal">
+            <h2 id = "modalTitle">Cadastro</h2>
+
+            <form action = "#" id = "modalForm">
+                <label for = "title" class = "remove">Nome</label>
+                <input
+                    id = "title"
+                    class = "modalInput"
+                    name = "title"
+                    type = "text"
+                    placeholder = "Nome"
+                    required
+                >
+
+                <label for = "price" class = "remove">Preço</label>
+                <input
+                    id = "price"
+                    class = "modalInput"
+                    name = "price"
+                    type = "number"
+                    placeholder = "Preço"
+                    step = "0.01"
+                    min = "0"
+                    required
+                >
+
+                <div style = "display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                    <label id = "radioIncome" for = "income" class = "incomeActive" onclick = "toggleRadio(0)">
+                        <div class = "formRadio">
+                            <img src = "./images/entradas.svg" alt = "">
+                            <span>Income</span>
+                        </div>
+                    </label>
+                    <input
+                        id = "income"
+                        class = "remove"
+                        name = "income-outcome"
+                        type = "radio"
+                        checked
+                    >
+        
+                    <label id = "radioOutcome" for = "outcome" onclick = "toggleRadio(1)">
+                        <div class = "formRadio">
+                            <img src = "./images/saidas.svg" alt = "">
+                            <span>Outcome</span>
+                        </div>
+                    </label>
+                    <input
+                        id = "outcome"
+                        class = "remove"
+                        name = "income-outcome"
+                        type = "radio"
+                    >
+                </div>
+
+                <label for = "category" class = "remove">Categoria</label>
+                <select id = "category" class = "modalInput" name = "category">
+                    <option value = "Alimentacao">  Alimentação</option>
+                    <option value = "Casa">         Casa</option>
+                    <option value = "Venda">        Venda</option>
+                </select>
+
+                <label for = "date" class = "remove">Data</label>
+                <input
+                    id = "date"
+                    class = "modalInput"
+                    name = "date"
+                    type = "date"
+                    placeholder = "dd/mm/aaaa"
+                    required
+                >
+
+                <button type = "submit" onclick = "register('null')">Enviar</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
