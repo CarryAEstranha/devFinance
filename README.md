@@ -1,5 +1,5 @@
 # devFinance
-![capa](https://user-images.githubusercontent.com/53675070/118331416-0173b900-b4df-11eb-81d0-c9159d9e35eb.png)
+![printscreen](https://user-images.githubusercontent.com/53675070/118331510-2405d200-b4df-11eb-9d08-3576b82cfaeb.png)
 
 O Dev.Finances é um projeto de controle de contas pessoais com controle de recebimentos e pagamentos, assim como calculo dos totais. <br/>
 
