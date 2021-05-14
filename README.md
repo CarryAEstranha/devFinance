@@ -4,8 +4,7 @@
 O Dev.Finances é um projeto de controle de contas pessoais com controle de recebimentos e pagamentos, assim como calculo dos totais.
 
 <pre>
-hello, this is
-   just an     example
-   
-....
+O Dev.Finances é um projeto de controle de contas pessoais com controle de recebimentos e pagamentos, assim como calculo dos totais.
+
+Esse site foi feito como parte do desafio Discover da [I'm an inline-style link](https://www.google.com)
 </pre>
